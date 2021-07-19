@@ -1,0 +1,63 @@
+header {
+   &.nav-container {
+      width: 100%;
+      background-color: transparent;
+
+      .navbar {
+         width: 100%;
+         display: grid;
+         grid-template-columns: auto 1fr;
+         grid-template-rows: 1fr;
+         align-items: center;
+         padding: 30px 50px;
+
+         #navbar-logo {
+            width: 80px;
+            &:hover {
+               opacity: 60%;
+               cursor: pointer;
+            }
+         }
+
+         .menu-toggle {
+            padding-top: 8px;
+            .bar {
+               width: 25px;
+               height: 3px;
+               margin: 5px auto;
+               transition: all 0.3s ease-in-out;
+               background: white;
+            }
+         }
+
+         .nav-menu {
+            grid-column: 2;
+            grid-row: 1;
+            align-self: center;
+            justify-self: end;
+
+            .nav-links {
+               color: white;
+               font-size: 1.2em;
+               font-weight: 600;
+               transition: all 0.2s ease-out;
+
+               &:not(:last-child) {
+                  margin-right: 30px;
+               }
+               &:hover {
+                  padding-bottom: 10px;
+                  color: $primary;
+                  opacity: 90%;
+                  border-bottom: 1px solid CurrentColor;
+               }
+
+               &.active {
+                  padding-bottom: 10px;
+                  border-bottom: 1px solid CurrentColor;
+               }
+            }
+         }
+      }
+   }
+}
